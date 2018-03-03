@@ -1,7 +1,6 @@
 package org.smart4j.framework.util;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import lombok.extern.slf4j.Slf4j;
 
 import java.io.FileNotFoundException;
 import java.io.InputStream;
@@ -10,8 +9,8 @@ import java.util.Properties;
 /**
  * @author shengxingyue, created on 2018/3/1
  */
+@Slf4j
 public class PropsUtil {
-    private static final Logger LOGGER = LoggerFactory.getLogger(PropsUtil.class);
 
     public static Properties loadProps(String fileName) {
         Properties properties = null;
@@ -22,7 +21,7 @@ public class PropsUtil {
             properties = new Properties();
             properties.load(is);
         } catch (Exception e) {
-            LOGGER.error("load file failure");
+            log.error("load file failure");
         }
         return properties;
     }
