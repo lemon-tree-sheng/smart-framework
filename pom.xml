@@ -87,5 +87,11 @@
             <artifactId>lombok</artifactId>
             <version>1.16.18</version>
         </dependency>
+        <!--cglib-->
+        <dependency>
+            <groupId>cglib</groupId>
+            <artifactId>cglib</artifactId>
+            <version>2.2.2</version>
+        </dependency>
     </dependencies>
 </project>
